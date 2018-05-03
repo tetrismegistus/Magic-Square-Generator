@@ -1,0 +1,23 @@
+﻿<Window x:Name="Magic_Square_Generator" x:Class="Magic_Square.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magic_Square"
+        mc:Ignorable="d"
+        Title="Magic Square Generator" Height="117" Width="228" ResizeMode="NoResize" Icon="mercury.ico">
+    <Grid Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="245*"/>
+            <ColumnDefinition Width="81*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="71*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Enter a base number" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="baseInput" Grid.Column="1" TextWrapping="Wrap" Text="10" HorizontalContentAlignment="Right" MaxLines="1" MaxLength="2"/>
+        <Button x:Name="generateButton" Content="Generate" Margin="0" Grid.Row="1" RenderTransformOrigin="-1,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Grid.ColumnSpan="2" Click="generateButton_Click"/>
+
+    </Grid>
+</Window>
